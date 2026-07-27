@@ -543,3 +543,316 @@ transform:translateY(0);
 animation:fadeIn .35s ease;
 
    }
+/* ==========================================
+   Responsive Design
+========================================== */
+
+@media (max-width:1024px){
+
+.today-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.controls{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:768px){
+
+header h1{
+
+font-size:26px;
+
+}
+
+header p{
+
+font-size:14px;
+
+}
+
+.today-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.controls{
+
+grid-template-columns:1fr;
+
+}
+
+.nav-buttons{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:10px;
+
+}
+
+#calendar{
+
+grid-template-columns:repeat(7,1fr);
+
+gap:4px;
+
+}
+
+.day{
+
+min-height:65px;
+
+padding:8px 5px;
+
+font-size:13px;
+
+}
+
+.day-name{
+
+font-size:12px;
+
+padding:8px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.container{
+
+width:98%;
+
+}
+
+.card{
+
+padding:15px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.nav-buttons{
+
+grid-template-columns:1fr;
+
+}
+
+.day{
+
+min-height:50px;
+
+font-size:12px;
+
+}
+
+.day-name{
+
+font-size:11px;
+
+}
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+footer{
+
+background:#0f766e;
+
+color:#fff;
+
+text-align:center;
+
+padding:20px;
+
+margin-top:30px;
+
+font-size:14px;
+
+}
+
+footer p{
+
+margin:5px 0;
+
+}
+
+/* ==========================================
+   Dark Mode
+========================================== */
+
+body.dark{
+
+background:#121212;
+
+color:#f5f5f5;
+
+}
+
+body.dark header{
+
+background:#064e3b;
+
+}
+
+body.dark footer{
+
+background:#064e3b;
+
+}
+
+body.dark .card{
+
+background:#1e1e1e;
+
+color:#f5f5f5;
+
+}
+
+body.dark .today-box{
+
+background:#2b2b2b;
+
+}
+
+body.dark .day{
+
+background:#2d2d2d;
+
+border-color:#444;
+
+color:#fff;
+
+}
+
+body.dark .day.empty{
+
+background:#202020;
+
+}
+
+body.dark .day:hover{
+
+background:#14532d;
+
+}
+
+body.dark .info p{
+
+background:#2d2d2d;
+
+color:#fff;
+
+}
+
+body.dark select,
+body.dark input,
+body.dark textarea{
+
+background:#2d2d2d;
+
+color:#fff;
+
+border:1px solid #555;
+
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#0f766e;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#0b5d57;
+
+}
+
+/* ==========================================
+   Print Mode
+========================================== */
+
+@media print{
+
+header,
+footer,
+.controls,
+.nav-buttons,
+button{
+
+display:none;
+
+}
+
+body{
+
+background:#fff;
+
+}
+
+.card{
+
+box-shadow:none;
+
+border:1px solid #000;
+
+}
+
+}
+
+/* ==========================================
+   Touch Optimization
+========================================== */
+
+button,
+.day,
+select{
+
+touch-action:manipulation;
+
+-webkit-tap-highlight-color:transparent;
+
+}
+
+/* ==========================================
+   End of style.css
+========================================== */
