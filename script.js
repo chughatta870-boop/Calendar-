@@ -526,3 +526,218 @@ updateAllInformation(today);
 
 
 });
+// ==========================================
+// Triple Calendar PWA
+// script.js
+// Main Controller Part 3 Final
+// ==========================================
+
+
+// ===============================
+// Date Search
+// ===============================
+
+function searchDate(){
+
+let picker =
+document.getElementById("datePicker");
+
+
+if(!picker.value){
+
+alert("Please select a date");
+
+return;
+
+}
+
+
+let date =
+new Date(picker.value);
+
+
+
+selectedYear =
+date.getFullYear();
+
+
+selectedMonth =
+date.getMonth();
+
+
+
+if(typeof generateCalendar==="function"){
+
+generateCalendar(
+selectedYear,
+selectedMonth
+);
+
+}
+
+
+
+updateAllInformation(date);
+
+
+}
+
+
+
+// ===============================
+// Backup Button
+// ===============================
+
+function backupData(){
+
+if(typeof exportCalendarData==="function"){
+
+exportCalendarData();
+
+}
+
+}
+
+
+
+// ===============================
+// Clear Data
+// ===============================
+
+function deleteAllData(){
+
+if(typeof clearAllData==="function"){
+
+clearAllData();
+
+}
+
+}
+
+
+
+// ===============================
+// Language Settings
+// ===============================
+
+
+let language =
+localStorage.getItem(
+"language"
+) || "en";
+
+
+
+function changeLanguage(lang){
+
+language=lang;
+
+
+localStorage.setItem(
+"language",
+lang
+);
+
+
+location.reload();
+
+}
+
+
+
+// ===============================
+// App Settings
+// ===============================
+
+
+const appSettings={
+
+version:"1.0",
+
+calendarStart:2025,
+
+calendarEnd:2034,
+
+language:language
+
+};
+
+
+
+function saveAppSettings(){
+
+if(typeof saveSettings==="function"){
+
+saveSettings(
+appSettings
+);
+
+}
+
+}
+
+
+
+// ===============================
+// Service Worker
+// ===============================
+
+
+if(
+"serviceWorker" in navigator
+){
+
+
+window.addEventListener(
+"load",
+()=>{
+
+
+navigator.serviceWorker.register(
+"sw.js"
+)
+.then(()=>{
+
+console.log(
+"PWA Service Worker Ready"
+);
+
+})
+.catch(error=>{
+
+console.log(
+"SW Error:",
+error
+);
+
+});
+
+
+});
+
+
+}
+
+
+
+// ===============================
+// Final App Start
+// ===============================
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+saveAppSettings();
+
+
+
+console.log(
+"Triple Calendar App Loaded"
+);
+
+
+
+});
