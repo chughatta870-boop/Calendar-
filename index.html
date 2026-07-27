@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>10 Years Islamic • English • Punjabi Desi Calendar</title>
+
+<meta name="theme-color" content="#0F766E">
+<meta name="description" content="10 Years Triple Calendar 2025-2034">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="icon-192.png">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h1>📅 Triple Calendar</h1>
+
+<p>Islamic • English • Punjabi Desi</p>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<!-- Today's Date -->
+
+<section class="card">
+
+<h2>Today's Date</h2>
+
+<div class="today-grid">
+
+<div class="today-box">
+
+<h3>English</h3>
+
+<p id="todayEnglish">Loading...</p>
+
+</div>
+
+<div class="today-box">
+
+<h3>Islamic</h3>
+
+<p id="todayHijri">Loading...</p>
+
+</div>
+
+<div class="today-box">
+
+<h3>Punjabi</h3>
+
+<p id="todayPunjabi">Loading...</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Controls -->
+
+<section class="card">
+
+<h2>Calendar Controls</h2>
+
+<div class="controls">
+
+<select id="yearSelect"></select>
+
+<select id="monthSelect">
+
+<option value="0">January</option>
+<option value="1">February</option>
+<option value="2">March</option>
+<option value="3">April</option>
+<option value="4">May</option>
+<option value="5">June</option>
+<option value="6">July</option>
+<option value="7">August</option>
+<option value="8">September</option>
+<option value="9">October</option>
+<option value="10">November</option>
+<option value="11">December</option>
+
+</select>
+
+<input
+type="date"
+id="datePicker"
+>
+
+<button id="showCalendar">
+
+Show Calendar
+
+</button>
+
+</div>
+
+<div class="nav-buttons">
+
+<button id="prevYear">
+
+⏪ Year
+
+</button>
+
+<button id="prevMonth">
+
+◀ Month
+
+</button>
+
+<button id="todayBtn">
+
+Today
+
+</button>
+
+<button id="nextMonth">
+
+Month ▶
+
+</button>
+
+<button id="nextYear">
+
+Year ⏩
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Calendar -->
+
+<section class="card">
+
+<h2 id="calendarTitle">
+
+Calendar
+
+</h2>
+
+<div id="calendar">
+
+</div>
+
+</section>
+
+<!-- Selected Date -->
+
+<section class="card">
+
+<h2>Date Information</h2>
+
+<div class="info">
+
+<p id="englishInfo"></p>
+
+<p id="hijriInfo"></p>
+
+<p id="punjabiInfo"></p>
+
+<p id="holidayInfo"></p>
+
+<p id="eventInfo"></p>
+
+</div>
+
+</section>
+
+<!-- Notes -->
+
+<section class="card">
+
+<h2>Notes</h2>
+
+<textarea
+id="noteText"
+placeholder="Write your note..."
+></textarea>
+
+<button id="saveNote">
+
+Save Note
+
+</button>
+
+</section>
+
+<!-- Punjabi -->
+
+<section class="card">
+
+<h2>Punjabi Month</h2>
+
+<p id="monthDescription">
+
+Loading...
+
+</p>
+
+</section>
+
+<!-- Islamic -->
+
+<section class="card">
+
+<h2>Islamic Event</h2>
+
+<p id="islamicEvent">
+
+Loading...
+
+</p>
+
+</section>
+
+<!-- Pakistan Holiday -->
+
+<section class="card">
+
+<h2>Pakistan Holiday</h2>
+
+<p id="pakHoliday">
+
+Loading...
+
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+
+© 2026 Triple Calendar
+
+</p>
+
+<p>
+
+2025 – 2034 Professional PWA
+
+</p>
+
+</footer>
+
+<script src="calendar.js"></script>
+<script src="hijri.js"></script>
+<script src="punjabi.js"></script>
+<script src="holidays.js"></script>
+<script src="events.js"></script>
+<script src="storage.js"></script>
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
